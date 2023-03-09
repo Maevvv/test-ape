@@ -1,0 +1,33 @@
+{
+  "env_conf": {
+      "num_states": 4,
+      "num_actions": 2
+    },
+
+  "Actor":{
+    "num_actors": 2,
+    "T": 5,
+    "num_steps": 3,
+    "epsilon": 0.4,
+    "alpha": 7,
+    "gamma": 0.99,
+    "n_step_transition_batch_size": 5,
+    "Q_network_sync_freq": 100
+  },
+
+  "Learner":{
+    "remove_old_xp_freq": 100,
+    "q_target_sync_freq": 2500,
+    "min_replay_mem_size": 20000,
+    "replay_sample_size": 32,
+    "load_saved_state": false
+  },
+
+  "Replay_Memory":{
+    "soft_capacity": 10000,
+    "priority_exponent": 0.6,
+    "importance_sampling_exponent": 0.4
+  }
+
+
+}
